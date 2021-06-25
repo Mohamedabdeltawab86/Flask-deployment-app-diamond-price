@@ -18,7 +18,8 @@ def predict():
     table = request.args.get("table")
     size = request.args.get("size")
 
-    price = model.predict([[catar, cut, depth, table, size ]])
+
+    price = model.predict(scaler.transform([[catar, cut, depth, table, size ]]))[0]
     return render_template("index.html", price = price)
 
 
