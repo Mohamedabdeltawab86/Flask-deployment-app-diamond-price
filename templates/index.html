@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v7 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/static/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+
+				{% if price %}
+					<p style='font-size: 25px;'>Predicted price is: <span style='color: #a4f773;'><b>{{ price }}</b></span> USD</p>
+				{% endif %}
+
+				
+				<form action="/predict" method='GET'>
+					<h3>Diamond price app</h3>
+					<p>This app for predicting diamond price</p>
+
+
+
+					<label class="form-group">
+						<input type="number" step=0.1 class="form-control"  name="catar">
+						<span>Catar</span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control"  name="cut">
+						<span>Cut</span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control"  name="depth">
+						<span>Depth</span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control"  name="table">
+						<span>Table</span>
+					</label>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control"  name="size">
+						<span>size</span>
+					</label>
+					
+					
+					<br>
+					<button type='submit'>Predict 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<br>
+				</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
